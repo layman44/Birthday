@@ -1,0 +1,34 @@
+﻿@using Birthday.Web.Models.Person
+@model CreatePersonViewModel
+@section scripts
+    {
+    <environment names="Development">
+        <script src="~/js/views/person/create.js" asp-append-version="true"></script>
+    </environment>
+    <environment names="Staging,Production">
+        <script src="~/js/views/person/create.min.js" asp-append-version="true"></script>
+    </environment>
+}
+<h2>
+    @L("Add-Person")
+</h2>
+<form id="PersonCreationForm">
+
+    <div class="form-group">
+        <label for="Name">@L("Add-PersonName")</label>
+        <input type="text" name="Name" class="form-control" placeholder="@L("Add-PersonName")" required maxlength="@Birthday.Persons.Person.MaxNameLength">
+    </div>
+    <div class="form-group">
+        <label for="RelationShip">@L("Add-PersonRelationShip")</label>
+        <input type="text" name="RelationShip" class="form-control" placeholder="@L("Add-PersonRelationShip")" required maxlength="@Birthday.Persons.Person.MaxRelationShipLength">
+    </div>
+    <div class="form-group">
+        <label for="Birthday">@L("Add-PersonBirthday")</label>
+        <input type="text" name="Birthday" class="form-control" placeholder="@L("Add-PersonBirthday")" required />
+    </div>
+    <div class="form-group">
+        <label for="PhoneNum">@L("Add-PersonPhoneNum")</label>
+        <input type="text" name="PhoneNum" class="form-control" placeholder="@L("Add-PersonPhoneNum")" required />
+    </div>
+    <button type="submit" class="btn btn-primary">@L("Add-Save")</button>
+</form>

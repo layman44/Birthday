@@ -1,0 +1,45 @@
+﻿@using Birthday.Web.Startup
+@model Birthday.Web.Models.Person.IndexViewModel
+
+@{
+    ViewBag.Title = L("PersonList");
+    ViewBag.ActiveMenu = PageNames.PersonList;
+
+}
+
+@section scripts
+    {
+    <environment names="Development">
+        <script src="~/js/views/person/index.js" asp-append-version="true"></script>
+    </environment>
+    <environment names="Staging,Production">
+        <script src="~/js/views/person/create.min.js" asp-append-version="true"></script>
+    </environment>
+}
+
+
+<h2>@L("PersonList")</h2>
+<span><a class="btn btn-primary btn-sm" id="btnmodify">@L("Add-Person")</a></span>
+<div class="row">
+    <div>
+        <ul class="list-group" id="personList">
+            @foreach (var person in Model.Persons)
+            {
+                <li class="list-group-item">
+                    <span class="pull-right"><a class="btn btn-danger btn-sm" asp-action="Update">@L("Modify")</a></span>
+                    <h4 class="list-group-item-heading">@person.Name</h4>
+                    <div class="list-group-item-text">
+                        关系:@person.RelationShip
+                    </div>
+                    <div class="list-group-item-text">
+                        生日:@person.Birthday.ToString("yyyy-MM-dd")
+                    </div>
+                    <div class="list-group-item-text">
+                        电话号码:@person.PhoneNum.Substring(0, 3)****@person.PhoneNum.Substring(7)
+                    </div>
+
+                </li>
+            }
+        </ul>
+    </div>
+</div>

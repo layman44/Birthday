@@ -1,0 +1,19 @@
+﻿{
+  "culture": "zh",
+  "texts": {
+    "HelloWorld": "世界，你好！",
+    "ChangeLanguage": "切换语言",
+    "HomePage": "主页",
+    "About": "关于",
+    "PersonList": "成员列表",
+    "Home_Description": "欢迎来到生日系统...",
+    "About_Description": "这是一个关于记录生日的系统",
+    "Add-Person": "新增",
+    "Add-PersonName": "成员名称",
+    "Add-PersonRelationShip": "关系",
+    "Add-PersonBirthday": "生日",
+    "Add-PersonPhoneNum": "手机号码",
+    "Add-Save": "保存",
+    "Modify": "修改"
+  }
+}
