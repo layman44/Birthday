@@ -9,7 +9,7 @@ using System.Text;
 namespace Birthday.Persons
 {
     [Table("Person")]
-    public class Person : Entity<Guid>, IHasCreationTime
+    public class Person : Entity<Guid>, IHasCreationTime,IHasModificationTime
     {
         public const int MaxNameLength = 32;
         public const int MaxRelationShipLength = 32;
@@ -28,6 +28,8 @@ namespace Birthday.Persons
         public string PhoneNum { get; set; }
 
         public DateTime CreationTime { get; set; }
+
+        public DateTime? LastModificationTime { get; set; }
 
         public Person()
         {

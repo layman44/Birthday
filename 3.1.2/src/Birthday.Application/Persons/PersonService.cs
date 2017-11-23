@@ -31,5 +31,38 @@ namespace Birthday.Persons
 
             return new ListResultDto<PersonListDto>(ObjectMapper.Map<List<PersonListDto>>(persons));
         }
+
+        public async Task<bool> Update(EditPersonInput input)
+        {
+            var person = await _personRepository.GetAsync(input.Id);
+
+            ObjectMapper.Map(input, person);
+            
+            await _personRepository.UpdateAsync(person);
+
+            return true;
+        }
+
+        public async Task<PersonDto> GetPersonById(Guid id)
+        {
+            var person = await _personRepository.GetAsync(id);
+
+            var dto = ObjectMapper.Map<PersonDto>(person);
+
+            return ObjectMapper.Map<PersonDto>(person);
+        }
+
+        public async Task<bool> Delete(Guid id)
+        {
+            var person = await _personRepository.GetAsync(id);
+
+            if (person == null)
+            {
+                throw new Abp.AbpException(L("DeleteFailed"));
+            }
+            await _personRepository.DeleteAsync(id);
+
+            return true;
+        }
     }
 }

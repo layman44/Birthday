@@ -11,9 +11,10 @@ using System;
 namespace Birthday.Migrations
 {
     [DbContext(typeof(BirthdayDbContext))]
-    partial class BirthdayDbContextModelSnapshot : ModelSnapshot
+    [Migration("20171123071609_AddModifyColumn")]
+    partial class AddModifyColumn
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

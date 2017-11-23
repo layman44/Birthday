@@ -1,11 +1,13 @@
-﻿using Abp.AutoMapper;
+﻿using Abp.Application.Services.Dto;
+using Abp.AutoMapper;
 using System;
 using System.ComponentModel.DataAnnotations;
 
 namespace Birthday.Persons.Dtos
 {
-    [AutoMapTo(typeof(Person))]
-    public class CreatePersonInput
+
+    [AutoMapFrom(typeof(Person))]
+    public class PersonDto: EntityDto<Guid>
     {
         [Required]
         [MaxLength(Person.MaxNameLength)]
@@ -22,5 +24,5 @@ namespace Birthday.Persons.Dtos
         [Phone]
         public string PhoneNum { get; set; }
 
-    }
+    }    
 }

@@ -30,6 +30,13 @@ namespace Birthday.Web.Controllers
         public async Task<ActionResult> Create() => View();
 
 
-        public async Task<ActionResult>Update()
+        public async Task<ActionResult> Update(Guid id)
+        {
+            var person =await  _personService.GetPersonById(id);
+
+            var model = new EditPersonViewModel(person);
+
+            return View(model);
+        }
     }
 }

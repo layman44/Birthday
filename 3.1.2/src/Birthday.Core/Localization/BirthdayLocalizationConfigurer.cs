@@ -11,7 +11,7 @@ namespace Birthday.Localization
     {
         public static void Configure(ILocalizationConfiguration localizationConfiguration)
         {
-            localizationConfiguration.Languages.Add(new LanguageInfo("zh", "中文", "famfamfam-flags cn", isDefault: true));
+            localizationConfiguration.Languages.Add(new LanguageInfo("zh-CN", "中文", "famfamfam-flags cn", isDefault: true));
             //localizationConfiguration.Languages.Add(new LanguageInfo("tr", "Türkçe", "famfamfam-flags tr"));
 
             localizationConfiguration.Sources.Add(

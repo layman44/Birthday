@@ -19,14 +19,15 @@
 
 
 <h2>@L("PersonList")</h2>
-<span><a class="btn btn-primary btn-sm" id="btnmodify">@L("Add-Person")</a></span>
+<span><a class="btn btn-primary btn-sm" asp-action="Create">@L("Add-Person")</a></span>
 <div class="row">
     <div>
         <ul class="list-group" id="personList">
             @foreach (var person in Model.Persons)
             {
                 <li class="list-group-item">
-                    <span class="pull-right"><a class="btn btn-danger btn-sm" asp-action="Update">@L("Modify")</a></span>
+                    <span class="pull-right"><a class="btn btn-danger btn-sm" data-person-id="@person.Id" data-person-name="@person.Name" name="deletebtn">@L("Delete")</a></span>
+                    <span class="pull-right"><a class="btn btn-success btn-sm" asp-action="Update" asp-route-id="@person.Id">@L("Modify")</a></span>
                     <h4 class="list-group-item-heading">@person.Name</h4>
                     <div class="list-group-item-text">
                         关系:@person.RelationShip

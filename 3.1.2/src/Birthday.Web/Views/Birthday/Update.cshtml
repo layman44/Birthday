@@ -1,4 +1,37 @@
-﻿
-@*
-    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@using Birthday.Web.Models.Person
+@model EditPersonViewModel
+@section scripts
+    {
+    <environment names="Development">
+        <script src="~/js/views/person/edit.js" asp-append-version="true"></script>
+    </environment>
+    <environment names="Staging,Production">
+        <script src="~/js/views/person/edit.min.js" asp-append-version="true"></script>
+    </environment>
+}
+<h2>
+    @L("Edit-Person")
+</h2>
+<form id="PersonEditForm">
+    <div class="form-group">
+        <label for="Name">@L("Edit-PersonName")</label>
+        <input type="text" name="Name" class="form-control" placeholder="@L("Edit-PersonName")" required maxlength="@Birthday.Persons.Person.MaxNameLength" value="@Model.PersonDto.Name"/>
+    </div>
+    <div class="form-group">
+        <label for="RelationShip">@L("Edit-PersonRelationShip")</label>
+        <input type="text" name="RelationShip" class="form-control" placeholder="@L("Add-PersonRelationShip")" required maxlength="@Birthday.Persons.Person.MaxRelationShipLength" value="@Model.PersonDto.RelationShip"/>
+    </div>
+    <div class="form-group">
+        <label for="Birthday">@L("Edit-PersonBirthday")</label>
+        <input type="text" name="Birthday" class="form-control" placeholder="@L("Edit-PersonBirthday")" required  value="@Model.PersonDto.Birthday.ToString("yyyy-MM-dd")"/>
+    </div>
+    <div class="form-group">
+        <label for="PhoneNum">@L("Edit-PersonPhoneNum")</label>
+        <input type="text" name="PhoneNum" class="form-control" placeholder="@L("Edit-PersonPhoneNum")" required  value="@Model.PersonDto.PhoneNum"/>
+    </div>
+    <div class="form-horizontal">
+        <button type="submit" class="btn btn-primary">@L("Edit-Save")</button>
+        <button type="button" class="btn btn-warning">@L("Edit-Cancel")</button>
+    </div>
+    <input type="hidden" name="Id" value="@Model.PersonDto.Id" />
+</form>

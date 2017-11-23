@@ -12,5 +12,11 @@ namespace Birthday.Persons
         Task Create(CreatePersonInput input);
 
         Task<ListResultDto<PersonListDto>> GetAll(GetAllPersonsInput input);
+
+        Task<PersonDto> GetPersonById(Guid id);
+
+        Task<bool> Update(EditPersonInput input);
+
+        Task<bool> Delete(Guid id);
     }
 }

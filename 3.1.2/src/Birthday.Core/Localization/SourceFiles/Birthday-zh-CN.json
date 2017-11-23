@@ -1,5 +1,5 @@
 ﻿{
-  "culture": "zh",
+  "culture": "zh-CN",
   "texts": {
     "HelloWorld": "世界，你好！",
     "ChangeLanguage": "切换语言",
@@ -14,6 +14,15 @@
     "Add-PersonBirthday": "生日",
     "Add-PersonPhoneNum": "手机号码",
     "Add-Save": "保存",
-    "Modify": "修改"
+    "Modify": "修改",
+    "Delete": "删除",
+    "Edit-Person": "修改",
+    "Edit-PersonName": "成员名称",
+    "Edit-PersonRelationShip": "关系",
+    "Edit-PersonBirthday": "生日",
+    "Edit-PersonPhoneNum": "手机号码",
+    "Edit-Save": "保存",
+    "Edit-Cancel": "取消",
+    "DeleteFailed": "删除失败"
   }
 }
