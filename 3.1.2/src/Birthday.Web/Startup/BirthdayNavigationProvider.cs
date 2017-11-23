@@ -11,7 +11,7 @@ namespace Birthday.Web.Startup
         public override void SetNavigation(INavigationProviderContext context)
         {
             context.Manager.MainMenu
-                .AddItem(
+                /*.AddItem(
                     new MenuItemDefinition(
                         PageNames.Home,
                         L("HomePage"),
@@ -25,7 +25,7 @@ namespace Birthday.Web.Startup
                         url: "Home/About",
                         icon: "fa fa-info"
                         )
-                ).AddItem(
+                )*/.AddItem(
                     new MenuItemDefinition(
                         PageNames.PersonList,
                         L("PersonList"),

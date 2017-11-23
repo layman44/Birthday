@@ -34,7 +34,8 @@
       "wwwroot/lib/abp-web-resources/Abp/Framework/scripts/libs/abp.toastr.js",
       "wwwroot/lib/abp-web-resources/Abp/Framework/scripts/libs/abp.blockUI.js",
       "wwwroot/lib/abp-web-resources/Abp/Framework/scripts/libs/abp.sweet-alert.js",
-      "wwwroot/lib/abp-web-resources/Abp/Framework/scripts/libs/abp.spin.js"
+      "wwwroot/lib/abp-web-resources/Abp/Framework/scripts/libs/abp.spin.js",
+      "wwwroot/js/jquery-extensions.js"
     ]
   },
   {
@@ -44,9 +45,15 @@
     ]
   },
   {
-    "outputFileName": "wwwroot/js/jquery-extensions.min.js",
+    "outputFileName": "wwwroot/js/views/person/edit.min.js",
     "inputFiles": [
-      "wwwroot/js/jquery-extensions.js"
+      "wwwroot/js/views/person/edit.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/views/person/index.min.js",
+    "inputFiles": [
+      "wwwroot/js/views/person/index.js"
     ]
   }
 ]
