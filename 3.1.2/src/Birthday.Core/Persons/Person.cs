@@ -23,6 +23,7 @@ namespace Birthday.Persons
         public string RelationShip { get; set; }
 
         [Required]
+        [DataType(DataType.Date)]
         public DateTime Birthday { get; set; }
 
         public string PhoneNum { get; set; }

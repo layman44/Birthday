@@ -16,6 +16,7 @@ namespace Birthday.Persons.Dtos
         public string RelationShip { get; set; }
 
         [Required]
+        [DataType(DataType.Date)]
         public DateTime Birthday { get; set; }
 
         [Required]
