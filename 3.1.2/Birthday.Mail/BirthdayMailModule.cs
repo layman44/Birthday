@@ -1,9 +1,6 @@
 ﻿using Abp.MailKit;
 using Abp.Modules;
 using Abp.Reflection.Extensions;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Birthday.Mail
 {

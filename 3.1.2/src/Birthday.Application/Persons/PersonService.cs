@@ -7,6 +7,7 @@ using Birthday.Persons.Dtos;
 using Abp.Domain.Repositories;
 using Abp.Linq.Extensions;
 using Microsoft.EntityFrameworkCore;
+using Birthday.Mail;
 
 namespace Birthday.Persons
 {
@@ -14,9 +15,14 @@ namespace Birthday.Persons
     {
         private readonly IRepository<Person, Guid> _personRepository;
 
-        public PersonService(IRepository<Person, Guid> personRepository)
+        private readonly IMailSendManager _mailSendManager;
+
+        public PersonService(IRepository<Person, Guid> personRepository, IMailSendManager mailSendManager)
         {
             _personRepository = personRepository;
+            _mailSendManager = mailSendManager;
+            //test
+            _mailSendManager.SendMail();
         }
 
         public async Task Create(CreatePersonInput input)
@@ -37,7 +43,7 @@ namespace Birthday.Persons
             var person = await _personRepository.GetAsync(input.Id);
 
             ObjectMapper.Map(input, person);
-            
+
             await _personRepository.UpdateAsync(person);
 
             return true;

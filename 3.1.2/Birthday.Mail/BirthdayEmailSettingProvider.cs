@@ -19,10 +19,10 @@ namespace Birthday.Mail
                 new SettingDefinition(EmailSettingNames.Smtp.Port, "465", L("SmtpPort"),
                     scopes: SettingScopes.Application | SettingScopes.Tenant),
 
-                new SettingDefinition(EmailSettingNames.Smtp.UserName, "mytempemail@foxmail.com", L("Username"),
+                new SettingDefinition(EmailSettingNames.Smtp.UserName, "348702974@qq.com", L("Username"),
                     scopes: SettingScopes.Application | SettingScopes.Tenant),
 
-                new SettingDefinition(EmailSettingNames.Smtp.Password, "daulgejvjyzbcabf", L("Password"),
+                new SettingDefinition(EmailSettingNames.Smtp.Password, "psqztlylazjrbija", L("Password"),
                     scopes: SettingScopes.Application | SettingScopes.Tenant),
 
                 new SettingDefinition(EmailSettingNames.Smtp.Domain, "smtp.qq.com", L("DomainName"),
