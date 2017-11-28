@@ -31,7 +31,7 @@ namespace Birthday.Mail
                 new SettingDefinition(EmailSettingNames.Smtp.EnableSsl, "true", L("UseSSL"),
                     scopes: SettingScopes.Application | SettingScopes.Tenant),
 
-                new SettingDefinition(EmailSettingNames.Smtp.UseDefaultCredentials, "true", L("UseDefaultCredentials"),
+                new SettingDefinition(EmailSettingNames.Smtp.UseDefaultCredentials, "false", L("UseDefaultCredentials"),
                     scopes: SettingScopes.Application | SettingScopes.Tenant),
 
                 new SettingDefinition(EmailSettingNames.DefaultFromAddress, "MyDefaultFromAddress",

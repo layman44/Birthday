@@ -12,7 +12,9 @@ namespace Birthday.Persons.Dtos
 
         public string RelationShip { get; set; }
 
-        public DateTime Birthday { get; set; }
+        public DateTime Birthday_Lunar { get; set; }
+
+        public DateTime Birthday_Solar { get; set; }
 
         public string PhoneNum { get; set; }
 

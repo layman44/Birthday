@@ -20,7 +20,11 @@ namespace Birthday.Persons.Dtos
 
         [Required]
         [DataType(DataType.Date)]
-        public DateTime Birthday { get; set; }
+        public DateTime Birthday_Lunar { get; set; }
+
+        [Required]
+        [DataType(DataType.Date)]
+        public DateTime Birthday_Solar { get; set; }
 
         [Required]
         [Phone]

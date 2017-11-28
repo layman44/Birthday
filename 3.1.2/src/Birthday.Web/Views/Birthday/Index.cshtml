@@ -33,7 +33,10 @@
                         关系:@person.RelationShip
                     </div>
                     <div class="list-group-item-text">
-                        生日:@person.Birthday.ToString("yyyy-MM-dd")
+                        农历生日:@person.Birthday_Lunar.ToString("yyyy-MM-dd")
+                    </div>
+                    <div class="list-group-item-text">
+                        阳历生日:@person.Birthday_Solar.ToString("yyyy-MM-dd")
                     </div>
                     <div class="list-group-item-text">
                         电话号码:@person.PhoneNum.Substring(0, 3)****@person.PhoneNum.Substring(7)

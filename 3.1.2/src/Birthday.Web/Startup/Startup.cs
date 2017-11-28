@@ -40,7 +40,6 @@ namespace Birthday.Web.Startup
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
         {
             app.UseAbp(); //Initializes ABP framework.
-
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();

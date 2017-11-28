@@ -22,9 +22,19 @@ namespace Birthday.Persons
         [MaxLength(MaxRelationShipLength)]
         public string RelationShip { get; set; }
 
+        /// <summary>
+        /// 农历
+        /// </summary>
         [Required]
         [DataType(DataType.Date)]
-        public DateTime Birthday { get; set; }
+        public DateTime Birthday_Lunar{ get; set; }
+
+        /// <summary>
+        /// 阳历
+        /// </summary>
+        [Required]
+        [DataType(DataType.Date)]
+        public DateTime Birthday_Solar { get; set; }
 
         public string PhoneNum { get; set; }
 
@@ -37,11 +47,12 @@ namespace Birthday.Persons
 
         }
 
-        public Person(string name, string relationShip, DateTime birthday, string phoneNum)
+        public Person(string name, string relationShip, DateTime birthday_lunar, DateTime birthday_solar, string phoneNum)
         {
             Name = name;
             RelationShip = relationShip;
-            Birthday = birthday;
+            Birthday_Lunar = birthday_lunar;
+            Birthday_Solar = birthday_solar;
             PhoneNum = phoneNum;
         }
     }

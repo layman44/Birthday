@@ -15,14 +15,9 @@ namespace Birthday.Persons
     {
         private readonly IRepository<Person, Guid> _personRepository;
 
-        private readonly IMailSendManager _mailSendManager;
-
-        public PersonService(IRepository<Person, Guid> personRepository, IMailSendManager mailSendManager)
+        public PersonService(IRepository<Person, Guid> personRepository)
         {
             _personRepository = personRepository;
-            _mailSendManager = mailSendManager;
-            //test
-            _mailSendManager.SendMail();
         }
 
         public async Task Create(CreatePersonInput input)

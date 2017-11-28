@@ -1,5 +1,6 @@
 ﻿using Abp.EntityFrameworkCore;
 using Birthday.Persons;
+using Birthday.Users;
 using Microsoft.EntityFrameworkCore;
 
 namespace Birthday.EntityFrameworkCore
@@ -9,7 +10,8 @@ namespace Birthday.EntityFrameworkCore
         //Add DbSet properties for your entities...
         public DbSet<Person> People { get; set; }
 
-        public BirthdayDbContext(DbContextOptions<BirthdayDbContext> options) 
+        public DbSet<User> User { get; set; }
+        public BirthdayDbContext(DbContextOptions<BirthdayDbContext> options)
             : base(options)
         {
             //this.Database.EnsureCreated();

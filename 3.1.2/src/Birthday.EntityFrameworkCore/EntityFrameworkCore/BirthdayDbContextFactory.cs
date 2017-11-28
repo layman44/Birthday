@@ -18,7 +18,7 @@ namespace Birthday.EntityFrameworkCore
                 builder,
                 configuration.GetConnectionString(BirthdayConsts.ConnectionStringName)
             );
-
+ 
             return new BirthdayDbContext(builder.Options);
         }
     }

@@ -22,6 +22,7 @@
       "wwwroot/lib/json2/json2.js",
       "wwwroot/lib/jquery/dist/jquery.js",
       "wwwroot/lib/bootstrap/dist/js/bootstrap.js",
+      "wwwroot/lib/bootstrap-datepicker-master/dist/js/bootstrap-datepicker.js",
       "wwwroot/lib/moment/min/moment-with-locales.js",
       "wwwroot/lib/jquery-validation/dist/jquery.validate.js",
       "wwwroot/lib/blockUI/jquery.blockUI.js",
@@ -35,7 +36,8 @@
       "wwwroot/lib/abp-web-resources/Abp/Framework/scripts/libs/abp.blockUI.js",
       "wwwroot/lib/abp-web-resources/Abp/Framework/scripts/libs/abp.sweet-alert.js",
       "wwwroot/lib/abp-web-resources/Abp/Framework/scripts/libs/abp.spin.js",
-      "wwwroot/js/jquery-extensions.js"
+      "wwwroot/js/jquery-extensions.js",
+      "wwwroot/js/permanentcalendar.js"
     ]
   },
   {

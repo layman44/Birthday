@@ -1,6 +1,12 @@
 ﻿(function ($) {
 
     $(function () {
+
+        $('input[name=Birthday_Lunar]').datepicker({
+        });
+
+        $('input[name=Birthday_Solar]').datepicker({
+        });
         var _$form = $('#PersonCreationForm');
 
         _$form.find('input:first').focus();

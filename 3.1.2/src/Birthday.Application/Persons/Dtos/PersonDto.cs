@@ -18,7 +18,10 @@ namespace Birthday.Persons.Dtos
         public string RelationShip { get; set; }
 
         [Required]
-        public DateTime Birthday { get; set; }
+        public DateTime Birthday_Lunar { get; set; }
+
+        [Required]
+        public DateTime Birthday_Solar { get; set; }
 
         [Required]
         [Phone]
