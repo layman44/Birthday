@@ -3,9 +3,21 @@
     $(function () {
 
         $('input[name=Birthday_Lunar]').datepicker({
+            language: "zh-CN",
+            autoclose: true,
+            clearBtn: true,
+            orientation: "bottom auto",
+            format: "yyyy-mm-dd"
+        }).on("changeDate", function (e) {
+            
         });
 
         $('input[name=Birthday_Solar]').datepicker({
+            language: "zh-CN",
+            autoclose: true,
+            clearBtn: true,
+            orientation: "bottom auto",
+            format: "yyyy-mm-dd"
         });
         var _$form = $('#PersonCreationForm');
 
